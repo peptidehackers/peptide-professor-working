@@ -1,0 +1,33 @@
+{
+  "name": "peptide-professor-phase2",
+  "version": "2.0.0",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm --prefix frontend ci || npm --prefix frontend install",
+    "build": "npm --prefix frontend run build",
+    "build:cloud-run": "npm --prefix frontend run build:cloud-run",
+    "start": "npm --prefix frontend run start",
+    "serve": "serve -s frontend/build -l ${PORT:-5000}",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.0",
+    "@playwright/test": "^1.40.0",
+    "axios": "^1.12.1",
+    "node-html-parser": "^7.0.1",
+    "serve": "^14.2.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "playwright": "^1.40.0",
+    "typescript": "^5.9.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
